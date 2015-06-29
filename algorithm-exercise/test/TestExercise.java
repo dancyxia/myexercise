@@ -32,5 +32,7 @@ import java.lang.annotation.ElementType;
 @Target ({ElementType.METHOD, ElementType.TYPE})
 public @interface TestExercise {
 	public boolean enabled() default true;
+	public String questionNo() default "";
+	public String questionDescription() default "";
 }
 

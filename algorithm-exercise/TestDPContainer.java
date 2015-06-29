@@ -29,7 +29,9 @@ import java.util.ArrayList;
 @TestExercise(enabled=true)
 public class TestDPContainer extends TestContainer{
 	
-	@TestExercise(enabled=true)
+	@TestExercise(enabled=true,
+	questionNo="",
+	questionDescription="Given N jobs where every job is represented by following three elements of it.	%n1) Start Time 	%n2) Finish Time 	%n3) Profit or Value Associated. 	%n Find the maximum profit subset of jobs such that no two jobs in the subset overlap. %n")
 	public static void testScheduleProblem () {
 		 int[][] data = {{3, 10, 20}, 
 						 {1, 2, 50}, 
@@ -41,19 +43,23 @@ public class TestDPContainer extends TestContainer{
 	}
 
 
-	@TestExercise(enabled=true)
+	@TestExercise(enabled=true,
+		questionNo="9.1",
+		questionDescription="A child is running up a staircase with n steps, and can hop either 1 step, 2 steps, or 3 steps at a time. %nImplement a method to count how many possible ways the child can run up the stairs. %npay attentiion to two problem: 1. n=0, result[0] = 1 2. for n staircases, should init result[n+1] array")
 	public static void testStepProblem() {
 		System.out.printf("there are %d ways to climb %d staircases %n", DynamicProgram.countWay(3), 3);
 		System.out.printf("there are %d ways to climb %d staircases %n", DynamicProgram.countWay(6), 6);
 	}
 
-	@TestExercise(enabled=true)
+	@TestExercise(enabled=true, 
+		questionNo="9.3",
+		questionDescription="A magic index in an array A[0.. .n-1] is defined to be an index such that A[i]= i. %nGiven a sorted array of distinct integers, write a method to find a magic index, if one exists, in array A.")
 	public static void testMagicIndex() {
 		int[] a = {-3, -1, 1, 3, 4, 7, 9};
 		System.out.printf("the magic index is %d %n", DynamicProgram.findMagicIndex(a));
 	}
 	
-	@TestExercise(enabled=true)
+	@TestExercise(enabled=true,	questionNo="9.4")
 	public static void testSubset() {
 		//PAY ATTENTION TO THIS. Have to use Integer so that Arrays.asList(a) works. Don't use int[], autoWrapper doesn't work here
 		//~ Integer[] a = {-3, -1, 1, 3, 4, 7, 9};
@@ -68,8 +74,5 @@ public class TestDPContainer extends TestContainer{
 			System.out.println();
 		}
 	}
-
-
-
 }
 

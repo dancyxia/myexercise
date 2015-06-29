@@ -45,7 +45,10 @@ public class TestContainer {
 								if (test.enabled()) {
 									System.out.println("******************************************");
 									System.out.printf("Test method: %s %n", m.getName());
-									System.out.println("******************************************");
+									//in case the description has multiple lines, add it to the original string directly
+									System.out.printf("Question No: %s %nDescription: "+ test.questionDescription(), test.questionNo());
+									
+									System.out.printf("%n******************************************");
 									System.out.println();
 									m.invoke(container.newInstance());
 									System.out.println();
